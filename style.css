@@ -108,3 +108,15 @@ nav ul li a {
   width: 20px;
   margin-top: 15px;
 }
+
+/* Responsivness for banner & Navigation areas */
+@media screen and (max-width: 770px) {
+  .banner-text h1 {
+    font-size: 40px;
+  }
+
+  .banner-btn a {
+    display: block;
+    margin: 20px auto;
+  }
+}
