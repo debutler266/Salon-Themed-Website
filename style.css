@@ -211,6 +211,77 @@ nav ul li a {
   text-align: initial;
 }
 
+#service {
+  width: 100%;
+  padding: 70px 0;
+  background: #ccc;
+}
+
+.service-box {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.single-service {
+  flex-basis: 48%; /*Gives 2-in-1 effect / 2 services in 1 row*/
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.single-service:hover .overlay {
+  opacity: 1;
+}
+
+.single-service img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+  opacity: 0;
+  transition: 1.2s;
+}
+
+.service-desc {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1.3s;
+}
+
+.service-desc p {
+  font-size: 13px;
+}
+
+hr {
+  background: #ffffff;
+  border: 0;
+  height: 2px;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.single-service:hover .service-desc {
+  bottom: 40%;
+  opacity: 1;
+}
+
 /* Responsivness for banner & Navigation areas */
 @media screen and (max-width: 770px) {
   .banner-text h1 {
@@ -239,5 +310,25 @@ nav ul li a {
 
   .features-img img {
     width: 100%;
+  }
+}
+
+/* Responsivness for Service area */
+@media screen and (max-width: 770px) {
+  .single-service {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .service-desc p {
+    font-size: 12px;
+  }
+
+  hr {
+    margin: 5px auto;
+  }
+
+  .single-service:hover .service-desc {
+    bottom: 25%!important;
   }
 }
