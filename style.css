@@ -304,10 +304,15 @@ hr {
   border-radius: 5px;
   box-shadow: 0 10px 20px 3px #00968814;
   cursor: pointer;
+  transition: transform .7s;
 }
 
 .testimonial-col p {
   font-size: 14px;
+}
+
+.testimonial-col:hover {
+  transform: translateY(-7px); /*wil go DOWN when hovered if you make it 7px instead of -7.*/
 }
 
 .user {
@@ -332,7 +337,91 @@ hr {
   color: #009688;
 }
 
+#footer {
+  padding: 100px 0 20px;
+  background: #ccc;
+  position: relative;
+}
 
+.footer-row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-row h1 {
+  margin: 10px 0;
+}
+
+.footer-row p {
+  line-height: 35px;
+}
+
+.footer-left .fa, .footer-right .fa {
+  font-size: 19px;
+  color: #009688;
+  margin: 10px;
+}
+
+.footer-img {
+  max-width: 370px;
+  position: absolute;
+  opacity: 0.1;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links .fa {
+  height: 40px;
+  width: 40px;
+  font-size: 19px;
+  line-height: 40px;
+  border: 1px solid #009688;
+  margin: 40px 5px 0;
+  color: #009688;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.social-links .fab {
+  height: 40px;
+  width: 40px;
+  font-size: 19px;
+  line-height: 40px;
+  border: 1px solid #009688;
+  margin: 40px 5px 0;
+  color: #009688;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.social-links .fa:hover, .fab:hover {
+  background: #009688;
+  color: #ffffff;
+  transform: translateY(-7px);
+}
+
+.social-links p {
+  font-size: 11px;
+  margin-top: 20px;
+}
 
 /* Responsivness for banner & Navigation areas */
 @media screen and (max-width: 770px) {
@@ -382,5 +471,24 @@ hr {
 
   .single-service:hover .service-desc {
     bottom: 25%!important;
+  }
+}
+
+/* Responsivness for Testimonials area */
+@media screen and (max-width: 770px) {
+  .testimonial-col {
+    flex-basis: 100%;
+  }
+}
+
+/* Responsivness for Footer area */
+@media screen and (max-width: 770px) {
+  .footer-left, .footer-right {
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+
+  .footer-img {
+    top: 25%; /* Image will be 25% from the top (reminder) */
   }
 }
