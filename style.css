@@ -433,6 +433,10 @@ hr {
     display: block;
     margin: 20px auto;
   }
+
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 /* Responsivness for Features area */
